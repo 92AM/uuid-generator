@@ -1,0 +1,15 @@
+/node_modules
+/dist
+/build
+
+## Ignore VS Code generated files (JLS files) ##
+.project
+.settings
+.classpath
+.vscode
+.history
+bin
+
+## Misc ##
+.DS_Store
+chromedriver.log
