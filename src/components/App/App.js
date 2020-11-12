@@ -3,7 +3,6 @@ import './App.css';
 import UuidV4 from '../UuidV4/UuidV4'
 import UuidV1 from '../UuidV1/UuidV1'
 import NilUuid from '../NilUuid/NilUuid'
-import { onClickCopyButton } from "../../utility/utils";
 
 class App extends Component {
 
