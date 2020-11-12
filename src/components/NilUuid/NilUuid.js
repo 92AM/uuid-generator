@@ -10,7 +10,7 @@ class NilUuid extends Component {
 
     return (
       <div className="NilUuid">
-        NIL UUID : 
+        <h2>NIL UUID : </h2> 
         <h1>
           {nilUuid}
           <button id={copyButtonClassAndId} className={copyButtonClassAndId} onClick={() => {onClickCopyButton(nilUuid, copyButtonClassAndId)}}>Copy</button>

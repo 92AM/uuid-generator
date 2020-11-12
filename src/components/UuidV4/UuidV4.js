@@ -11,7 +11,7 @@ class UuidV4 extends Component {
 
     return (
       <div className="UuidV4">
-        UUID V4 : 
+        <h2>UUID V4 : </h2>
         <h1>
           {uuidV4}
           <button id={copyButtonClassAndId} className={copyButtonClassAndId} onClick={() => {onClickCopyButton(uuidV4, copyButtonClassAndId)}}>Copy</button>

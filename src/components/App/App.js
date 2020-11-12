@@ -3,6 +3,7 @@ import './App.css';
 import UuidV4 from '../UuidV4/UuidV4'
 import UuidV1 from '../UuidV1/UuidV1'
 import NilUuid from '../NilUuid/NilUuid'
+import { onClickCopyButton } from "../../utility/utils";
 
 class App extends Component {
 
@@ -45,7 +46,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-h1">UUID Generator</h1>
+        <h1 style={{fontSize: 100}}>UUID Generator</h1>
           <p>
             {showUuidV1 && <UuidV1 />}
             {showUuidV4 && <UuidV4 />}
