@@ -1,0 +1,14 @@
+body {
+  background-color: #282c34;
+}
+
+.Copy-button {
+  background-color: #00b2c9; 
+  color: white;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid transparent;
+  margin-left: 25px;
+  padding: 10px;
+  font-size: large;
+}
