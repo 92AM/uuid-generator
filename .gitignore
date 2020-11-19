@@ -13,3 +13,7 @@ bin
 ## Misc ##
 .DS_Store
 chromedriver.log
+
+
+## IntelliJ IDEA ##
+.idea/
