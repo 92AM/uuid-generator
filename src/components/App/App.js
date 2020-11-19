@@ -1,71 +1,78 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import './App.css';
-import UuidV4 from '../UuidV4/UuidV4'
-import UuidV1 from '../UuidV1/UuidV1'
-import NilUuid from '../NilUuid/NilUuid'
+import {Uuid} from '../Uuid/Uuid'
+import {UUID_NIL, UUID_V1, UUID_V4} from "../../utility/UuidConstants";
 
 class App extends Component {
 
-  constructor() {
-    super();
-    this.state = {
-      showUuidV1: true,
-      showUuidV4: false,
-      showNilUuid: false
-    };
-    this.showUuidComponent = this.showUuidComponent.bind(this);
-  }
-
-  showUuidComponent(name) {
-    switch (name) {
-      case "showUuidV1":
-        this.setState({ showUuidV1: true });
-        this.setState({ showUuidV4: false });
-        this.setState({ showNilUuid: false});
-        console.log(name);
-        break;
-      case "showUuidV4":
-        this.setState({ showUuidV1: false });
-        this.setState({ showUuidV4: true });
-        this.setState({ showNilUuid: false});
-        console.log(name);
-        break;
-      case "showNilUuid":
-        this.setState({ showUuidV1: false });
-        this.setState({ showUuidV4: false });
-        this.setState({ showNilUuid: true});
-        console.log(name);
-        break;
-      default: break;
+    constructor(props) {
+        super(props);
+        this.state = {
+            showUuidV1: true,
+            showUuidV4: false,
+            showNilUuid: false
+        };
+        this.showUuidComponent = this.showUuidComponent.bind(this);
     }
-  }
 
-  render() {
-    const { showUuidV1, showUuidV4, showNilUuid } = this.state;
-    return (
-      <div className="App">
-        <header className="App-header">
-        <h1 style={{fontSize: 100}}>UUID Generator</h1>
-          <p>
-            {showUuidV1 && <UuidV1 />}
-            {showUuidV4 && <UuidV4 />}
-            {showNilUuid && <NilUuid />}
-            <div className="App-button-container">
-              <button className="App-button" onClick={() => this.showUuidComponent("showUuidV1")}>
-                UUID V1
-              </button>
-              <button className="App-button" onClick={() => this.showUuidComponent("showUuidV4")}>
-                UUID V4
-              </button>
-              <button className="App-button" onClick={() => this.showUuidComponent("showNilUuid")}>
-                NIL UUID
-              </button>
+    showUuidComponent(name) {
+        switch (name) {
+            case UUID_V1:
+                this.setState({showUuidV1: true});
+                this.setState({showUuidV4: false});
+                this.setState({showNilUuid: false});
+                console.log(name);
+                break;
+            case UUID_V4:
+                this.setState({showUuidV1: false});
+                this.setState({showUuidV4: true});
+                this.setState({showNilUuid: false});
+                console.log(name);
+                break;
+            case UUID_NIL:
+                this.setState({showUuidV1: false});
+                this.setState({showUuidV4: false});
+                this.setState({showNilUuid: true});
+                console.log(name);
+                break;
+            default:
+                break;
+        }
+    }
+
+    render() {
+        const {showUuidV1, showUuidV4, showNilUuid} = this.state;
+
+        const AppButtonContainer = () => {
+            return (
+                <div className="App-button-container">
+                    <button className="App-button" onClick={() => this.showUuidComponent(UUID_V1)}>
+                        UUID V1
+                    </button>
+                    <button className="App-button" onClick={() => this.showUuidComponent(UUID_V4)}>
+                        UUID V4
+                    </button>
+                    <button className="App-button" onClick={() => this.showUuidComponent(UUID_NIL)}>
+                        NIL UUID
+                    </button>
+                </div>
+            );
+        };
+
+        return (
+            <div className="App">
+                <header className="App-header">
+                    <h1 style={{fontSize: 100}}>UUID Generator</h1>
+                    <p>
+                        {showUuidV1 && <Uuid uuidType={UUID_V1}/>}
+                        {showUuidV4 && <Uuid uuidType={UUID_V4}/>}
+                        {showNilUuid && <Uuid uuidType={UUID_NIL}/>}
+                        <AppButtonContainer/>
+                    </p>
+                </header>
             </div>
-          </p>
-        </header>
-      </div>
-    );
-  }
+        );
+    }
 }
 
 export default App;
