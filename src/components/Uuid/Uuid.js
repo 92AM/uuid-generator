@@ -1,6 +1,7 @@
 import React from "react";
 import {v1 as uuidv1, v4 as uuidv4} from 'uuid';
 import '../../../src/global.css';
+import './Uuid.css';
 import {onClickCopyButton} from "../../utility/utils";
 import {UUID_NIL, UUID_V1, UUID_V4} from "../../utility/UuidConstants";
 
@@ -37,9 +38,9 @@ export const Uuid = ({uuidType}) => {
 
     return (
         <div className={className}>
-            <h2 className={'uuid-h2'}>{uuidHeaderValue}</h2>
+            <h2 className={'Uuid-header'}>{uuidHeaderValue}</h2>
             <div>
-                <h1 className={'uuid-h1'}>
+                <h1 className={'Uuid-container'}>
                     {uuidValue}
                 </h1>
                 <button id={copyButtonClassAndId} className={copyButtonClassAndId} onClick={() => {

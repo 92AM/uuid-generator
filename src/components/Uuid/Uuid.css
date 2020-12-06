@@ -1,0 +1,21 @@
+@media (min-width: 576px) {
+    .Uuid-header {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 768px) {
+    .Uuid-header {
+        font-size: 45px;
+    }
+}
+
+@media (min-width: 992px) {
+    .Uuid-header {
+        font-size: 65px;
+    }
+}
+
+.Uuid-container {
+    padding: 10px;
+}
