@@ -3,11 +3,9 @@ import {v1 as uuidv1, v4 as uuidv4} from 'uuid';
 import '../../../src/global.css';
 import './Uuid.css';
 import {onClickCopyButton} from "../../utility/utils";
-import {UUID_NIL, UUID_V1, UUID_V4} from "../../utility/UuidConstants";
+import {UUID_NIL, UUID_V1, UUID_V4, COPY_BUTTON_CLASS_AND_ID} from "../../utility/UuidConstants";
 
 export const Uuid = ({uuidType}) => {
-
-    const copyButtonClassAndId = "Copy-button";
 
     let uuidValue;
     let uuidHeaderValue;
@@ -43,8 +41,8 @@ export const Uuid = ({uuidType}) => {
                 <h1 className={'Uuid-container'}>
                     {uuidValue}
                 </h1>
-                <button id={copyButtonClassAndId} className={copyButtonClassAndId} onClick={() => {
-                    onClickCopyButton(uuidValue, copyButtonClassAndId)
+                <button id={COPY_BUTTON_CLASS_AND_ID} className={COPY_BUTTON_CLASS_AND_ID} onClick={() => {
+                    onClickCopyButton(uuidValue, COPY_BUTTON_CLASS_AND_ID)
                 }}>Copy
                 </button>
             </div>

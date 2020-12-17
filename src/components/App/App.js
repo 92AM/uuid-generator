@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import './App.css';
 import {Uuid} from '../Uuid/Uuid'
-import {UUID_NIL, UUID_V1, UUID_V4} from "../../utility/UuidConstants";
+import {UUID_NIL, UUID_V1, UUID_V4, COPY_BUTTON_CLASS_AND_ID} from "../../utility/UuidConstants";
+import {resetCopyButton} from "../../utility/utils";
 
 class App extends Component {
 
@@ -16,6 +17,7 @@ class App extends Component {
     }
 
     showUuidComponent(name) {
+        resetCopyButton(COPY_BUTTON_CLASS_AND_ID);
         switch (name) {
             case UUID_V1:
                 this.setState({showUuidV1: true});
