@@ -3,11 +3,33 @@ body {
 }
 
 .Copy-button {
-  background-color: #00b2c9; 
+  background-color: #00b2c9;
   color: white;
   text-align: center;
-  display: inline-block;
-  border: 1px solid transparent;
-  padding: 10px;
-  font-size: large;
+  display: inline-flex;
+  padding: 26px 45px;
+  font-size: xx-large;
+  border: solid #00b2c9;
+  justify-content: center;
+  /*min-width: 210px;*/
+  /*max-width: 637px;*/
+  /*width: 100%;*/
+  /*max-width: 637px;*/
+  /*max-width: 636px;*/
+  /*width: 100%;*/
+  min-width: 210px;
+  width: 0;
+  height: 93px;
+  margin-top: 60px;
+}
+
+@media (min-width: 871px) {
+  .Copy-button {
+    margin-top: 0;
+    /*margin-top: 20px;*/
+    /*max-width: 637px;*/
+    /*min-width: 210px;*/
+    /*max-width: 637px;*/
+    /*width: 100%;*/
+  }
 }

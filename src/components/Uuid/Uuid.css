@@ -17,5 +17,14 @@
 }
 
 .Uuid-container {
-    padding: 10px;
+    padding: 25px;
+    border-style: solid;
+    border-color: #00b2c9;
+    display: inline-flex;
+    font-size: xx-large;
+    /*margin-bottom: 15px;*/
+}
+
+.Uuid-wrapper {
+    text-align: center;
 }

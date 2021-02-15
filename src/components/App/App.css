@@ -1,11 +1,13 @@
 .App {
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    /*padding-right: 100px;*/
+    /*padding-left: 100px;*/
 }
 
 .App-header {
     background-color: #282c34;
-    min-height: 50vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -15,6 +17,18 @@
 
 .App-h1 {
     padding-bottom: 15px;
+}
+
+.App-button {
+    background-color: #00b2c9;
+    color: white;
+    text-align: center;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: xx-large;
+    margin: 30px;
+    border: solid #00b2c9;
 }
 
 @media (min-width: 576px) {
@@ -27,24 +41,18 @@
     .App-h1 {
         font-size: 65px;
     }
+    /*.App-button {*/
+    /*    margin: 15px;*/
+    /*}*/
 }
 
 @media (min-width: 992px) {
     .App-h1 {
         font-size: 100px;
     }
-}
-
-
-.App-button {
-    background-color: #00b2c9;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 30px;
-    font-size: xx-large;
+    /*.App-button {*/
+    /*    margin: 30px;*/
+    /*}*/
 }
 
 .App-button-container {

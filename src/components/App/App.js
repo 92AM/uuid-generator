@@ -65,13 +65,13 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <h1  className="App-h1">UUID Generator</h1>
-                    <p>
-                        {showUuidV1 && <Uuid uuidType={UUID_V1}/>}
-                        {showUuidV4 && <Uuid uuidType={UUID_V4}/>}
-                        {showNilUuid && <Uuid uuidType={UUID_NIL}/>}
-                        <AppButtonContainer/>
-                    </p>
                 </header>
+                <div>
+                    {showUuidV1 && <Uuid uuidType={UUID_V1}/>}
+                    {showUuidV4 && <Uuid uuidType={UUID_V4}/>}
+                    {showNilUuid && <Uuid uuidType={UUID_NIL}/>}
+                    <AppButtonContainer/>
+                </div>
             </div>
         );
     }

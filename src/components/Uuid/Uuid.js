@@ -37,10 +37,10 @@ export const Uuid = ({uuidType}) => {
     return (
         <div className={className}>
             <h2 className={'Uuid-header'}>{uuidHeaderValue}</h2>
-            <div>
-                <h1 className={'Uuid-container'}>
+            <div className={'Uuid-wrapper'}>
+                <div className={'Uuid-container'}>
                     {uuidValue}
-                </h1>
+                </div>
                 <button id={COPY_BUTTON_CLASS_AND_ID} className={COPY_BUTTON_CLASS_AND_ID} onClick={() => {
                     onClickCopyButton(uuidValue, COPY_BUTTON_CLASS_AND_ID)
                 }}>Copy
